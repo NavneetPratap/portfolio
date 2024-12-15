@@ -1,0 +1,195 @@
+/* styles.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+header {
+    background: linear-gradient(135deg, #8d8a84, #616160);
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    animation: slide-in 1s ease-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav ul {
+    background: #7b7b7b;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    animation: fade-in 1s ease-out;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #c6c6c6;
+}
+
+section {
+    padding: 2em;
+    margin: 1em 0;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.home-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.home-content h2 {
+    flex-basis: 100%;
+    margin-bottom: 1em;
+}
+
+.home-content p {
+    flex-grow: 1;
+    margin-right: 20px;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+}
+
+.home-image {
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+footer {
+    background: #646464;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto;
+}
+
+.skills .skill {
+    margin-bottom: 1em;
+    animation: grow-in 1s ease-out;
+}
+
+.skills .skill p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.skill-bar {
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.5em;
+}
+
+.skill-bar .progress {
+    background: #92dd95;
+    height: 20px;
+    border-radius: 5px;
+    transition: width 1s;
+}
+
+.project {
+    margin-bottom: 1em;
+    animation: fade-in-up 1s ease-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    animation: fade-in 1s ease-out;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    background: #4f5d50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #119d18;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes grow-in {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
